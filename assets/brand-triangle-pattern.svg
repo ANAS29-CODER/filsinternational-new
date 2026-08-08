@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" fill="none">
+  <g opacity=".92">
+    <path fill="#7D4BE0" d="M20 20h40L40 60 20 20Z"/><path fill="#EF436A" d="M60 20h40L80 60 60 20Z"/>
+    <path fill="#B143B8" d="m40 60 20-40 20 40H40Z"/><path fill="#382664" d="M80 60h40l-20 40-20-40Z"/>
+    <path fill="#F89E48" d="m100 20 20 40H80l20-40Z"/><path fill="#9D73E7" d="m120 60 20 40h-40l20-40Z"/>
+    <path fill="#EF436A" d="M140 60h40l-20 40-20-40Z"/><path fill="#6CCCdd" d="m160 100 20-40 20 40h-40Z"/>
+    <path fill="#C8B6F1" d="M20 100h40l-20 40-20-40Z"/><path fill="#A95FA2" d="m60 100 20 40H40l20-40Z"/>
+    <path fill="#382664" d="M80 140h40l-20 40-20-40Z"/><path fill="#EF436A" d="m120 140 20 40h-40l20-40Z"/>
+    <path fill="#7D4BE0" d="M140 180h40l-20 40-20-40Z"/><path fill="#F3A6B9" d="m180 180 20 40h-40l20-40Z"/>
+    <path fill="#6CCCdd" d="M200 100h40l-20 40-20-40Z"/><path fill="#A95FA2" d="m240 100 20 40h-40l20-40Z"/>
+    <path fill="#E7DCF7" d="M240 140h40l-20 40-20-40Z"/><path fill="#EF436A" d="m280 140 20 40h-40l20-40Z"/>
+  </g>
+</svg>
