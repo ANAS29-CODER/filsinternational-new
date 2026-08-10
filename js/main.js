@@ -56,7 +56,7 @@
     { selector: ".payment-chip strong", values: ["Clear steps"] },
     { selector: ".audiences-section .section-heading .eyebrow", values: ["Fils for every buying and selling journey"] },
     { selector: ".audiences-section .section-heading h2", values: ["Designed for you, <span>whatever your role.</span>"] },
-    { selector: ".audience-label", values: ["FOR SHOPPERS AND INDIVIDUALS", "FOR MERCHANTS AND ENTREPRENEURS"] },
+    { selector: ".audience-label", values: ["FOR CONSUMERS", "FOR MERCHANTS AND ENTREPRENEURS"] },
     { selector: ".audience-card h3", values: ["Discover. Bid. Buy with confidence.", "Launch your store. Expand your reach."] },
     { selector: ".audience-card > p", values: ["Shop new and used products and join timed or live auctions through one streamlined experience.", "Turn products into a scalable storefront with live selling, auctions and practical merchant tools."] },
     { selector: ".audience-card li", values: ["New and used products", "Timed and live auctions", "Payments and delivery in one place", "A storefront with your name and logo", "Management tools and clear activity", "Plans that match your stage"] },

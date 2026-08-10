@@ -4780,6 +4780,43 @@ a.footer-contact-item:hover {
   }
 }
 
+/* Mobile header: retain the complete wordmark and mirror the controls with page language. */
+@media (max-width: 920px) {
+  .site-header .nav-shell > .brand {
+    position: absolute;
+    top: 50%;
+    inset-inline-start: 0;
+    left: auto;
+    right: auto;
+    display: block;
+    width: clamp(142px, 43vw, 168px);
+    height: auto;
+    transform: translateY(-50%);
+  }
+
+  .site-header .nav-toggle {
+    inset-inline-end: 0;
+  }
+
+  .site-header .brand .brand-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 6px 12px rgba(45, 21, 74, .1));
+  }
+
+  .site-header .brand .brand-mark {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-header .nav-shell > .brand {
+    width: clamp(132px, 43vw, 158px);
+    height: auto;
+  }
+}
+
 /* Final mobile rhythm and pricing safeguards. */
 @media (max-width: 680px) {
   .section {
@@ -5431,5 +5468,139 @@ body.plan-dialog-open {
 
   .audience-card:hover > img {
     bottom: -70px;
+  }
+}
+
+/* Audience cards: normalize screenshots with different source ratios and keep copy unobstructed. */
+.audience-card {
+  min-height: 680px;
+}
+
+.audience-card > :not(img) {
+  position: relative;
+  z-index: 1;
+}
+
+.audience-card > img,
+.audience-card:hover > img {
+  z-index: 0;
+  bottom: -56px;
+  left: 30px;
+  width: 184px;
+  height: 326px;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 22%;
+}
+
+.audience-merchant > img,
+.audience-merchant:hover > img {
+  left: 34px;
+}
+
+@media (max-width: 920px) {
+  .audience-card {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 680px) {
+  .audience-card {
+    min-height: 640px;
+  }
+
+  .audience-card > img,
+  .audience-card:hover > img,
+  .audience-merchant > img,
+  .audience-merchant:hover > img {
+    bottom: -48px;
+    left: 22px;
+    width: 160px;
+    height: 284px;
+  }
+}
+
+/* Keep the mobile menu control locked to one edge position before and after the header becomes sticky. */
+@media (max-width: 920px) {
+  .site-header,
+  .site-header.is-scrolled {
+    padding: 0;
+  }
+
+  .site-header .nav-shell,
+  .site-header.is-scrolled .nav-shell {
+    position: relative;
+    box-sizing: border-box;
+    width: min(calc(100% - 28px), var(--container));
+    min-height: 76px;
+    margin-inline: auto;
+    padding: 0;
+  }
+
+  .site-header .nav-toggle,
+  .site-header.is-scrolled .nav-toggle {
+    top: 50%;
+    inset-inline-end: 0;
+    margin: 0;
+    transform: translateY(-50%);
+  }
+}
+
+/* Fixed transforms on mobile can leave a drawer halfway off-screen after a sticky repaint.
+   Keep the panel at its final side position and only fade its visibility. */
+@media (max-width: 920px) {
+  [dir="rtl"] .nav-panel,
+  [dir="ltr"] .nav-panel,
+  .site-header.is-scrolled .nav-panel {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: none;
+    transition: opacity .18s ease, visibility 0s linear .18s;
+  }
+
+  .nav-panel.is-open,
+  .site-header.is-scrolled .nav-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    transition: opacity .18s ease;
+  }
+}
+
+/* Full-screen mobile navigation: prevents viewport and sticky-scroll gaps on real devices. */
+@media (max-width: 920px) {
+  .nav-panel,
+  .site-header.is-scrolled .nav-panel,
+  [dir="rtl"] .nav-panel,
+  [dir="ltr"] .nav-panel {
+    position: fixed;
+    z-index: 220;
+    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: max(18px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) max(22px, env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .nav-panel.is-open,
+  .site-header.is-scrolled .nav-panel.is-open {
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    transform: none;
+  }
+
+  body.menu-open .page-progress {
+    opacity: 0;
   }
 }
